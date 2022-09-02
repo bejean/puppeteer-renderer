@@ -1,0 +1,14 @@
+version: '2.4'
+services:
+  httploaderws:
+    build: .
+    container_name: httploaderws
+    #mem_limit: 2gb
+    #mem_reservation: 1gb
+    #cpu_count: 2
+    ports:
+      - 8082:3000
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+ 
